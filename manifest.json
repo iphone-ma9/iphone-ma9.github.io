@@ -1,0 +1,22 @@
+{
+  "name": "毎日一服 ここロのサプリ",
+  "short_name": "ここロのサプリ",
+  "description": "ブッダ・孫子・ジョブズ・ドラッカーの名言を毎日お届け。一日一服、偉人の言葉でここロを整えるマインドサプリ。",
+  "start_url": "/cocoro-sapuri/",
+  "display": "standalone",
+  "background_color": "#eef2ff",
+  "theme_color": "#7c9ef0",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
