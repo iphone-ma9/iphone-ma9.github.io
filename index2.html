@@ -81,7 +81,7 @@
   --text2: #4B5563;
   --text3: #9CA3AF;
   --border: #E5E7EB;
-  --tab-h: 64px;
+  --tab-h: 54px;
   --safe-b: env(safe-area-inset-bottom, 0px);
   --radius: 14px;
 
@@ -277,7 +277,7 @@ body {
 .today-card {
   flex-shrink: 0;
   width: calc(100vw - 56px);
-  min-height: 260px;
+  min-height: 220px;
   border-radius: 16px;
   padding: 0;
   scroll-snap-align: start;
@@ -321,7 +321,7 @@ body {
   font-weight: 800;
   line-height: 1.7;
   color: #FFFFFF;
-  margin-bottom: 14px;
+  margin-bottom: 6px;
   letter-spacing: 0.01em;
   word-break: break-all;
   display: -webkit-box;
@@ -337,7 +337,7 @@ body {
   flex-direction: column;
   gap: 4px;
   margin-bottom: 14px;
-  margin-top: 14px;
+  margin-top: 8px;
   flex-shrink: 0;
 }
 .today-card-attribution-top {
@@ -358,9 +358,7 @@ body {
   filter: brightness(1.4);
 }
 .today-card-source {
-  font-size: 11px;
-  color: rgba(255,255,255,0.4);
-  padding-left: 13px;
+  display: none;
 }
 
 /* カテゴリ＋タグエリア */
@@ -450,7 +448,7 @@ body {
 /* ── 今日のカードフッター ── */
 .today-card-footer {
   border-top: 1px solid rgba(255,255,255,0.10);
-  padding: 10px 14px 14px;
+  padding: 6px 14px 8px;
 }
 .today-card-actions {
   display: flex;
@@ -2225,7 +2223,7 @@ body {
 
 <!-- 偉人フィルターモーダル -->
 <div id="sage-filter-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:300;align-items:flex-end;" onclick="closeSageFilter(event)">
-  <div id="sage-filter-sheet" style="background:#1A3A5C;border-radius:20px 20px 0 0;width:100%;max-height:90vh;overflow-y:auto;padding:0 0 calc(20px + env(safe-area-inset-bottom));border-top:2px solid rgba(255,255,255,0.18);box-shadow:0 -8px 32px rgba(0,0,0,0.5);position:relative;" onclick="event.stopPropagation()">
+  <div id="sage-filter-sheet" style="background:#1A3A5C;border-radius:20px 20px 0 0;width:100%;max-height:80vh;overflow-y:auto;padding:0 0 calc(20px + env(safe-area-inset-bottom));border-top:2px solid rgba(255,255,255,0.18);box-shadow:0 -8px 32px rgba(0,0,0,0.5);position:relative;" onclick="event.stopPropagation()">
     <button onclick="document.getElementById('sage-filter-overlay').style.display='none'" style="position:absolute;top:16px;left:16px;background:rgba(255,255,255,0.12);border:none;width:44px;height:44px;border-radius:50%;font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.85);line-height:1;">✕</button>
     <div id="sage-filter-handle" style="width:36px;height:4px;background:rgba(255,255,255,0.2);border-radius:2px;margin:12px auto 0;cursor:pointer;position:relative;">
       <div style="position:absolute;top:-12px;left:-30px;right:-30px;bottom:-12px;"></div>
@@ -3420,7 +3418,7 @@ function renderTodayCards() {
           </div>
           <div class="today-card-chips">
             <div class="today-card-chips-row">${catChips}</div>
-            ${tagChips ? `<div class="today-card-chips-row">${tagChips}</div>` : ''}
+
           </div>
         </div>
         <div class="today-card-footer" onclick="event.stopPropagation()">
@@ -5025,7 +5023,7 @@ function renderDiagnosisResult() {
                 <div class="today-card-attribution-top"><span class="today-card-author-dot"></span><span class="today-card-author">${sage.name}</span></div>
                 <span class="today-card-source">${resultQuote.source}</span>
               </div>
-              <div class="today-card-chips"><div class="today-card-chips-row">${catChips}</div>${tagChips ? `<div class="today-card-chips-row">${tagChips}</div>` : ""}</div>
+              <div class="today-card-chips"><div class="today-card-chips-row">${catChips}</div></div>
             </div>
             <div class="today-card-footer" onclick="event.stopPropagation()">
               <div class="today-card-actions">
